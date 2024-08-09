@@ -8,9 +8,9 @@
             <% data_attr = has_dropdown ? { toggle: "dropdown" } : {} %>
             <% aria_attr = has_dropdown ? { haspopup: true, expanded: false } : {} %>
             <% if parent.container? %>
-              <%= content_tag :span, parent.name, class: "nav-link main-nav-bar-item main-nav-bar-category-button #{dropdown_toggle_class}", data: data_attr, aria: aria_attr %>
+              <%= content_tag :span, parent.name, class: "nav-category nav-link main-nav-bar-item main-nav-bar-category-button #{dropdown_toggle_class}", data: data_attr, aria: aria_attr %>
             <% else %>
-               <%= spree_nav_link_tag(parent, { class: "nav-link main-nav-bar-item main-nav-bar-category-button #{dropdown_toggle_class}", data: data_attr, aria: aria_attr }) %>
+               <%= spree_nav_link_tag(parent, { class: "nav-category nav-link main-nav-bar-item main-nav-bar-category-button #{dropdown_toggle_class}", data: data_attr, aria: aria_attr }) %>
             <% end %>
 
              <% if has_dropdown %>
