@@ -1,0 +1,24 @@
+.homepage-hero-image-text {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  width: 100% !important;
+}
+.homepage-hero-image .spree-btn.btn-primary {
+  background: #71cd14 !important;
+  border: none;
+  font-size: 14px !important;
+  padding: 12px 48px !important;
+  @media (min-width: 426px) and (max-width: 768px) {
+    font-size: 10px !important;
+    padding: 8px 20px !important;
+  }
+  @media (max-width: 425px) {
+    font-size: 8px !important;
+    padding: 8px 16px !important;
+  }
+}
+.homepage-hero-image {
+  .hero-content {
+    right: 61% !important;
+  }
+}
