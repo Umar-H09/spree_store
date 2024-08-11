@@ -77,4 +77,4 @@ gem 'spree_emails', '~> 4.7' # transactional emails (optional)
 gem 'spree_sample', '~> 4.7' # dummy data like products, taxons, etc (optional)
 gem 'spree_auth_devise', '~> 4.6' # Devise integration (optional)
 gem 'spree_gateway', '~> 3.11' # payment gateways eg. Stripe, Braintree (optional)
-
+gem 'font-awesome-sass', '~> 6.0.0'
