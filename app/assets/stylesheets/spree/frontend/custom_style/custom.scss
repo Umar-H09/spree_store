@@ -5,3 +5,50 @@
 @import "_featured_section";
 @import "_side_by_side";
 @import "_footer";
+@import "_cart";
+@import "_checkout";
+
+.custom-subcategories {
+  color: #555555 !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+.custom-subcategories:hover {
+  color: #71cd14 !important;
+}
+.plp-sort-header {
+  color: #797979 !important;
+}
+.custom-category-dropdown.active {
+  background-color: transparent !important;
+  font-weight: 900 !important;
+  color: #555555 !important;
+}
+.custom-category-options {
+  border: 1px solid #eff2f3;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.custom-category-options-mbl {
+  border: 1px solid #eff2f3 !important;
+  border-radius: 5px !important;
+  margin: 10px;
+}
+.category-options-list {
+  color: #797979;
+  font-size: 14px;
+  border: none !important;
+}
+.category-options-list:hover {
+  color: #71cd14 !important;
+}
+.custom-btn-price {
+  background-color: #71cd14 !important;
+  color: #ffffff !important;
+  border: 1px solid #71cd14;
+  font-weight: 700 !important;
+}
+.custom-btn-price:hover {
+  background-color: #ffffff !important;
+  color: #71cd14 !important;
+}

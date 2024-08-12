@@ -37,7 +37,7 @@
               <img class="product-added-modal-product-image-container-image" src="data:," alt="<%= @product&.name %>">
             </div>
             <div class="col-8 col-sm-6 col-lg-4 py-1 product-added-modal-product-details">
-              <div class="product-added-modal-product-details-name"></div>
+              <div class="product-added-modal-product-details-name added-cart"></div>
               <div class="product-added-modal-product-details-price"></div>
             </div>
           </div>
@@ -47,14 +47,14 @@
         <div class="container-fluid">
           <div class="row pb-4 justify-content-center">
             <div class="col-12 col-lg-8">
-              <%= link_to spree.checkout_path, class: 'btn btn-primary w-100 font-weight-bold product-added-modal-button', method: :get do %>
+              <%= link_to spree.checkout_path, class: 'btn btn-primary w-100 font-weight-bold product-added-modal-button added-cart-checkout-btn', method: :get do %>
                 <%= Spree.t(:checkout) %>
               <% end %>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-              <%= link_to spree.cart_path, class: 'btn btn-outline-primary w-100 font-weight-bold product-added-modal-button' do %>
+              <%= link_to spree.cart_path, class: 'btn btn-outline-primary w-100 font-weight-bold product-added-modal-button added-cart-view-btn' do %>
                 <%= Spree.t('pdp.view_cart') %>
               <% end %>
             </div>

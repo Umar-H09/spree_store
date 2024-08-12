@@ -13,6 +13,9 @@
 }
 .footer-spree-copyright-content {
   color: #ffffff !important;
+  @media (min-width: 768px) {
+    font-size: 14px !important;
+  }
 }
 .footer-account-label {
   color: #797979 !important;
@@ -29,9 +32,4 @@
 }
 .footer-spree .spree-icon path:hover {
   fill: #71cd14 !important;
-}
-@media (min-width: 768px) {
-  .footer-spree-copyright-content {
-    font-size: 14px !important;
-  }
 }

@@ -4,7 +4,7 @@
     <% @product_properties.each do |product_property| %>
       <% if product_property.show_property? %>
         <li>
-          <span class="font-weight-bold text-break"><%= product_property.property.presentation %>:</span>
+          <span class="font-weight-bold text-break cart-product-detail"><%= product_property.property.presentation %>:</span>
           <span class="text-break"><%= product_property.value %></span>
         </li>
       <% end %>

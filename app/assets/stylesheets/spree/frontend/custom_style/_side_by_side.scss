@@ -1,5 +1,5 @@
 .side-by-side-images {
-  background-color: #81c408 !important;
+  background-color: #81c408;
   border: 1px solid #81c408 !important;
   border-radius: 5px;
   .title {
@@ -17,6 +17,8 @@
     padding-bottom: 8px !important;
   }
 }
-.sections-space {
-  padding: 12vh 0 !important;
+@media (min-width: 768px) {
+  .sections-space {
+    padding: 12vh 10px !important;
+  }
 }
