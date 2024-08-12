@@ -62,11 +62,11 @@
        <% end %>
 
        <% if section.title_one.present? || section.subtitle_one.present? %>
-        <div class="homepage-bottom-box-inner p-1 p-sm-2 p-md-4 homepage-hpb" role="img" aria-label="New Collection">
-          <div class="homepage-bottom-box-inner-small-text">
+        <div class="homepage-bottom-box-inner p-1 p-sm-2 p-md-3 homepage-hpb side-by-side-images" role="img" aria-label="New Collection">
+          <div class="homepage-bottom-box-inner-small-text title">
             <%= section&.title_one %>
           </div>
-          <div class="homepage-bottom-box-inner-big-text">
+          <div class="homepage-bottom-box-inner-big-text subtitle">
             <%= section.subtitle_one %>
           </div>
         </div>
@@ -105,11 +105,11 @@
        <% end %>
 
        <% if section.title_two.present? || section.subtitle_two.present? %>
-        <div class="homepage-bottom-box-inner p-1 p-sm-2 p-md-4 homepage-hpb" role="img" aria-label="New Collection">
-          <div class="homepage-bottom-box-inner-small-text">
+        <div class="homepage-bottom-box-inner p-1 p-sm-2 p-md-3 homepage-hpb side-by-side-images bg-white" role="img" aria-label="New Collection">
+          <div class="homepage-bottom-box-inner-small-text title-two">
             <%= section&.title_two %>
           </div>
-          <div class="homepage-bottom-box-inner-big-text">
+          <div class="homepage-bottom-box-inner-big-text subtitle">
             <%= section.subtitle_two %>
           </div>
         </div>
