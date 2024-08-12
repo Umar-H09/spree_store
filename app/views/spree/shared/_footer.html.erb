@@ -1,5 +1,5 @@
 <% cache spree_menu_cache_key('footer') do %>
-  <footer id="footer" class="pt-2 mx-auto border-top footer-spree">
+  <footer id="footer" class="pt-2 mx-auto border-top footer-spree custom-footer">
     <div class="container">
       <div class="row d-xl-flex justify-content-xl-around pb-xl-5">
         <div class="d-flex d-xl-block flex-xl-grow-0 col-xl-4">
@@ -14,7 +14,7 @@
         </div>
         <div class="d-block flex-nowrap py-2 order-xl-last col-xl-3 offset-xl-1">
           <% unless current_store.facebook.blank? && current_store.twitter.blank? && current_store.instagram.blank? %>
-            <div class="d-none d-xl-block pt-4 pb-3 pl-2 footer-spree-label">
+            <div class="d-none d-xl-block pt-4 pb-3 pl-2 footer-spree-label footer-contact">
               <%= Spree.t(:follow_us) %>
             </div>
           <% end %>
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div class="py-xl-2 col-xl-3 offset-xl-1">
+        <div class="py-xl-2 col-xl-3 offset-xl-1 footer-contact">
           <div class="d-none d-xl-block pt-4 pb-3 footer-spree-label">
             <%= Spree.t(:contact_us) %>
           </div>
@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-      <div class="row d-none d-xl-flex border-top pt-5 footer-spree-menu-links">
+      <div class="row d-none d-xl-flex border-top pt-5 footer-spree-menu-links custom-footer-menu">
 
         <% if spree_menu('footer').present? %>
           <% spree_menu('footer').children.each do |parent| %>
@@ -70,7 +70,7 @@
 
         <% if spree.respond_to?(:account_path) %>
           <div class="col-3 mb-5">
-            <div class="footer-spree-label">
+            <div class="footer-spree-label footer-account-label">
               <%= Spree.t(:my_account) %>
             </div>
             <div class="pt-2">

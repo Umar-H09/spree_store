@@ -31,7 +31,7 @@
   <% link_two = nil %>
 <% end %>
 
-<div class="col-12 col-md-6 mb-3 mb-md-0 <%= section_one_padding %>">
+<div class="col-12 col-md-6 sections-space mb-3 mb-md-0 <%= section_one_padding %>">
   <%= link_to link_one,
               class: "d-flex align-items-end justify-content-center bg-light text-center overflow-hidden homepage-bottom-box #{'pointer-events-none cursor-default' unless link_one}",
               style: '--aspect-ratio:54/35;' do %>
@@ -74,7 +74,7 @@
   <% end %>
 </div>
 
-<div class="col-12 col-md-6 <%= section_two_padding %>">
+<div class="col-12 col-md-6 sections-space <%= section_two_padding %>">
   <%= link_to link_two,
               class: "d-flex align-items-end justify-content-center bg-light text-center overflow-hidden homepage-bottom-box #{'pointer-events-none cursor-default' unless link_two}",
               style: '--aspect-ratio:54/35;' do %>
