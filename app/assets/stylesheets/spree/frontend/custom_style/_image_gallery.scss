@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+  .homepage-featured-product {
+    border-left-width: 3px solid #eff2f3 !important;
+    padding: 0 25px !important;
+    border-radius: 2px !important;
+    color: #4a4a4a !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    transition: all 300ms linear 0s !important;
+  }
+}
+@media (max-width: 768px) {
+  .homepage-featured-product {
+    color: #4a4a4a !important;
+    transition: all 300ms linear 0s !important;
+  }
+}

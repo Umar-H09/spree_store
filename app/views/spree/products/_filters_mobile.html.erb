@@ -9,7 +9,7 @@
           <%= inline_svg_tag 'close.svg', id: 'filter-by-overlay-hide-button' %>
         </div>
       </div>
-      <div id="filters-accordion">
+      <div id="filters-accordion" class="custom-category-options-mbl">
         <% available_option_types.each do |option_type| %>
           <% option_type_name = option_type.filter_param %>
           <% ot_downcase_name = option_type_name.downcase %>
@@ -89,6 +89,6 @@
 
   <div class="container position-absolute text-center plp-overlay-buttons pt-3">
     <%= clear_all_filters_link(permitted_params) %>
-    <%= link_to Spree.t('plp.done'), permitted_params, id: 'filterProductsButtonMobile', class: 'btn btn-primary spree-btn w-100 done-btn', data: { params: permitted_params } %>
+    <%= link_to Spree.t('plp.done'), permitted_params, id: 'filterProductsButtonMobile', class: 'btn btn-primary spree-btn w-100 done-btn custom-btn-price', data: { params: permitted_params } %>
   </div>
 </div>

@@ -3,7 +3,7 @@
     <div id="methods">
       <%= form.fields_for :shipments do |ship_form| %>
         <div class="shipment">
-          <h4 class="text-uppercase checkout-content-header checkout-content-shipping-methods-header mb-1">
+          <h4 class="text-uppercase checkout-content-header checkout-content-shipping-methods-header mb-1 billing-address">
             <%= Spree.t('checkout_page.delivery_method') %>
           </h4>
           <div id="shipToLocation" class="mb-4">

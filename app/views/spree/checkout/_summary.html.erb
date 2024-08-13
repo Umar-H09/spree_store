@@ -1,8 +1,8 @@
 <div class="checkout-content-summary">
-  <h3 class="text-uppercase text-center checkout-content-summary-header"><%= Spree.t(:order_summary) %></h3>
+  <h3 class="text-uppercase text-center checkout-content-summary-header billing-address"><%= Spree.t(:order_summary) %></h3>
   <div class="w-100 checkout-content-summary-table" data-hook="order_summary">
     <div class="d-table-cell"><%= Spree.t(:subtotal) %>:</div>
-    <div class="d-table-cell text-right"><%= order.display_item_total.to_html %></div>
+    <div class="d-table-cell text-right checkout-total"><%= order.display_item_total.to_html %></div>
 
     <% if order.line_item_adjustments.nonzero.exists? %>
       <% order.line_item_adjustments.nonzero.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
@@ -32,7 +32,7 @@
       <% else %>
         <div class="d-table-cell"><%= Spree.t(:shipping) %>:</div>
         <% shipping_total = Spree::Money.new(order.shipments.to_a.sum(&:cost), currency: order.currency) %>
-        <div class="d-table-cell text-right"
+        <div class="d-table-cell text-right checkout-review-nummeric"
             data-hook='shipping-total'
             data-currency='<%= Money::Currency.find(order.currency).symbol %>'
             thousands-separator='<%= shipping_total.thousands_separator %>'
@@ -65,7 +65,7 @@
     <div class="checkout-content-summary-table-order-total">
       <div class="d-table-cell"><%= Spree.t(:total) %>:</div>
       <div class="d-table-cell text-right">
-        <span id='summary-order-total' data-currency="<%= Money::Currency.find(order.currency).symbol %>">
+        <span id='summary-order-total' class='checkout-total ' data-currency="<%= Money::Currency.find(order.currency).symbol %>">
           <%= order.display_total.to_html %>
         </span>
       </div>

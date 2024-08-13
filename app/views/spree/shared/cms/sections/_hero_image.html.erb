@@ -8,41 +8,38 @@
   <% section_padding = 'px-2' %>
 <% end %>
 <div class="col-12 homepage-hero-image position-relative p-0 <%= section_padding %>">
-
   <div class="bg-light" style="--aspect-ratio:12/5;">
     <% if section.image_one&.attachment&.attached? %>
+      <!-- SM to MD -->
+      <img class="d-block d-md-none lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_one_sm) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_one_sm) %>"
+        alt="<%= section&.title %>">
 
-        <!-- SM to MD -->
-        <img class="d-block d-md-none lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_one_sm) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_one_sm) %>"
-          alt="<%= section&.title %>">
+      <!-- MD to LG -->
+      <img class="d-none d-md-block d-lg-none lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_one_md) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_one_md) %>"
+        alt="<%= section&.title %>">
 
-        <!-- MD to LG -->
-        <img class="d-none d-md-block d-lg-none lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_one_md) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_one_md) %>"
-          alt="<%= section&.title %>">
+      <!-- LG to XL -->
+      <img class="d-none d-lg-block d-xl-none lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_one_lg) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_one_lg) %>"
+        alt="<%= section&.title %>">
 
-        <!-- LG to XL -->
-        <img class="d-none d-lg-block d-xl-none lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_one_lg) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_one_lg) %>"
-          alt="<%= section&.title %>">
+      <!-- XL UP -->
+      <img class="d-none d-xl-block lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_one_xl) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_one_xl) %>"
+        alt="<%= section&.title %>">
 
-        <!-- XL UP -->
-        <img class="d-none d-xl-block lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_one_xl) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_one_xl) %>"
-          alt="<%= section&.title %>">
-
-     <% else %>
+    <% else %>
        <%= icon( name: 'card-image',
                  classes: 'text-black-50',
                  width: 26,
                  height: 26) %>
-     <% end %>
-
+    <% end %>
     <div class="hero-content position-absolute-y-center">
       <% if section.title.present? %>
         <div class="homepage-hero-image-text mx-auto pb-0 pb-sm-2 pb-md-3">
@@ -55,6 +52,38 @@
           <%= link_to section.button_text, spree_localized_link(section), class: 'btn btn-primary spree-btn px-5' %>
         </div>
       <% end %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row text-center py-5">
+    <div class="col-lg-3 col-md-6 feature">
+      <div class= "single-feature">
+        <i class="fas fa-hand-holding-usd"></i>
+        <h3>Money back gurantee</h3>
+        <p>Shall open divide a one</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 feature">
+      <div class= "single-feature">
+        <i class="fas fa-truck"></i>
+        <h3>Free Delivery</h3>
+        <p>Shall open divide a one</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 feature">
+      <div class= "single-feature">
+        <i class="fas fa-headset"></i>
+        <h3>Always support</h3>
+        <p>Shall open divide a one</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 feature">
+      <div class= "single-feature">
+        <i class="fas fa-lock"></i>
+        <h3>Secure payment</h3>
+        <p>Shall open divide a one</p>
+      </div>
     </div>
   </div>
 </div>

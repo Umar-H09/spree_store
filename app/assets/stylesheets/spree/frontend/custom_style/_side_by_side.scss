@@ -1,0 +1,24 @@
+.side-by-side-images {
+  background-color: #81c408;
+  border: 1px solid #81c408 !important;
+  border-radius: 5px;
+  .title {
+    font-weight: 600 !important;
+    color: white !important;
+    padding-bottom: 8px !important;
+  }
+  .subtitle {
+    font-weight: 600 !important;
+    color: #45595b !important;
+  }
+  .title-two {
+    font-weight: 600 !important;
+    color: #81c408 !important;
+    padding-bottom: 8px !important;
+  }
+}
+@media (min-width: 768px) {
+  .sections-space {
+    padding: 12vh 10px !important;
+  }
+}

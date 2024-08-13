@@ -56,108 +56,58 @@
 <% end %>
 
 <!-- Left Block -->
-<div class="col-6 <%= section_one_padding %>">
-
-  <!-- Top Left Block SQUARE -->
-  <!-- margin-bottom: 3.7% is important for keeping the bottom of the sections aligned -->
-  <div class="row" style="margin-bottom: 3.7%;">
-    <div class="col-12">
-
-      <%= link_to link_one, class: link_one_classes, style: '--aspect-ratio:18/13;' do %>
-        <% if section.image_one&.attachment&.attached? && section.image_one&.attachment&.variable? %>
-
-            <!-- XS to MD -->
-            <img class="d-md-none lazyload"
-              data-src="<%= main_app.cdn_image_url(section.img_one_md) %>"
-              data-srcset="<%= main_app.cdn_image_url(section.img_one_md) %>"
-              alt="<%= section&.title_one %>">
-
-            <!-- MD to XL -->
-            <img class="d-none d-md-block d-xl-none lazyload"
-              data-src="<%= main_app.cdn_image_url(section.img_one_lg) %>"
-              data-srcset="<%= main_app.cdn_image_url(section.img_one_lg) %>"
-              alt="<%= section&.title_one %>">
-
-            <!-- XL UP -->
-            <img class="d-none d-xl-block lazyload"
-              data-src="<%= main_app.cdn_image_url(section.img_one_xl) %>"
-              data-srcset="<%= main_app.cdn_image_url(section.img_one_xl) %>"
-              alt="<%= section&.title_one %>">
-        <% else %>
-          <%= icon( name: 'card-image',
-                    classes: 'homepage-taxon-box text-black-50',
-                    width: 26,
-                    height: 26) %>
-        <% end %>
-        <div class="<%= labels_class %>" aria-label="<%= section&.title_one %>">
-          <h3 class="homepage-hpb"><%= section&.title_one %></h3>
-        </div>
-      <% end %>
-
+<div class="col-4 <%= section_one_padding %>">
+  <%= link_to link_one, class: link_one_classes, style: '--aspect-ratio:27/40;' do %>
+    <% if section.image_one&.attachment&.attached? && section.image_one&.attachment&.variable? %>
+    <!-- XS to MD -->
+      <img class="d-md-none lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_one_md) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_one_md) %>"
+        alt="<%= section&.title_one %>">
+    <!-- MD to XL -->
+        <img class="d-none d-md-block d-xl-none lazyload"
+          data-src="<%= main_app.cdn_image_url(section.img_one_lg) %>"
+          data-srcset="<%= main_app.cdn_image_url(section.img_one_lg) %>"
+          alt="<%= section&.title_one %>">
+    <!-- XL UP -->
+        <img class="d-none d-xl-block lazyload"
+          data-src="<%= main_app.cdn_image_url(section.img_one_xl) %>"
+          data-srcset="<%= main_app.cdn_image_url(section.img_one_xl) %>"
+          alt="<%= section&.title_one %>">
+    <% else %>
+        <%= icon( name: 'card-image',
+                  classes: 'homepage-taxon-box text-black-50',
+                  width: 26,
+                  height: 26) %>
+    <% end %>
+    <div class="<%= labels_class %>" aria-label="<%= section&.title_one %>">
+      <h3 class="homepage-hpb homepage-featured-product"><%= section&.title_one %></h3>
     </div>
-  </div>
-
-  <!-- Bottom Left Block SQUARE -->
-  <div class="row">
-    <div class="col-12">
-
-      <%= link_to link_three, class: link_three_classes, style: '--aspect-ratio:18/13;' do %>
-        <% if section.image_three&.attachment&.attached? && section.image_three&.attachment&.variable? %>
-
-            <!-- XS to MD -->
-            <img class="d-md-none lazyload"
-              data-src="<%= main_app.cdn_image_url(section.img_three_md) %>"
-              data-srcset="<%= main_app.cdn_image_url(section.img_three_md) %>"
-              alt="<%= section&.title_three %>">
-
-            <!-- MD to XL -->
-            <img class="d-none d-md-block d-xl-none lazyload"
-              data-src="<%= main_app.cdn_image_url(section.img_three_lg) %>"
-              data-srcset="<%= main_app.cdn_image_url(section.img_three_lg) %>"
-              alt="<%= section&.title_three %>">
-
-            <!-- XL UP -->
-            <img class="d-none d-xl-block lazyload"
-              data-src="<%= main_app.cdn_image_url(section.img_three_xl) %>"
-              data-srcset="<%= main_app.cdn_image_url(section.img_three_xl) %>"
-              alt="<%= section&.title_three %>">
-        <% else %>
-          <%= icon( name: 'card-image',
-                    classes: 'homepage-taxon-box text-black-50',
-                    width: 26,
-                    height: 26) %>
-        <% end %>
-        <div class="<%= labels_class %>" aria-label="<%= section&.title_three %>">
-          <h3 class="homepage-hpb"><%= section&.title_three %></h3>
-        </div>
-      <% end %>
-
-    </div>
-  </div>
+  <% end %>
 </div>
 
-<!-- Right Block TALL -->
-<div class="col-6 <%= section_two_padding %>">
+
+<!-- Mid Block -->
+<div class="col-4 <%= section_one_padding %>">
   <%= link_to link_two, class: link_two_classes, style: '--aspect-ratio:27/40;' do %>
     <% if section.image_two&.attachment&.attached? && section.image_two&.attachment&.variable? %>
+    <!-- XS to MD -->
+      <img class="d-md-none lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_two_md) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_two_md) %>"
+        alt="<%= section&.title_two %>">
 
-        <!-- XS to MD -->
-        <img class="d-md-none lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_two_md) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_two_md) %>"
-          alt="<%= section&.title_two %>">
+    <!-- MD to XL -->
+      <img class="d-none d-md-block d-xl-none lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_two_lg) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_two_lg) %>"
+        alt="<%= section&.title_two %>">
 
-        <!-- MD to XL -->
-        <img class="d-none d-md-block d-xl-none lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_two_lg) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_two_lg) %>"
-          alt="<%= section&.title_two %>">
-
-        <!-- XL UP -->
-        <img class="d-none d-xl-block lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_two_xl) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_two_xl) %>"
-          alt="<%= section&.title_two %>">
+    <!-- XL UP -->
+      <img class="d-none d-xl-block lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_two_xl) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_two_xl) %>"
+        alt="<%= section&.title_two %>">
     <% else %>
       <%= icon( name: 'file-image',
                 classes: 'homepage-taxon-box text-black-50',
@@ -165,7 +115,40 @@
                 height: 26) %>
     <% end %>
     <div class="<%= labels_class %>" aria-label="<%= section&.title_two %>">
-      <h3 class="homepage-hpb"><%= section&.title_two %></h3>
+      <h3 class="homepage-hpb homepage-featured-product"><%= section&.title_two %></h3>
+    </div>
+  <% end %>
+</div>
+
+<!-- Right Block -->
+<div class="col-4 <%= section_two_padding %>">
+  <%= link_to link_three, class: link_three_classes, style: '--aspect-ratio:27/40;' do %>
+    <% if section.image_three&.attachment&.attached? && section.image_three&.attachment&.variable? %>
+    <!-- XS to MD -->
+      <img class="d-md-none lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_three_md) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_three_md) %>"
+        alt="<%= section&.title_three %>">
+
+    <!-- MD to XL -->
+      <img class="d-none d-md-block d-xl-none lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_three_lg) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_three_lg) %>"
+        alt="<%= section&.title_three %>">
+
+    <!-- XL UP -->
+      <img class="d-none d-xl-block lazyload"
+        data-src="<%= main_app.cdn_image_url(section.img_three_xl) %>"
+        data-srcset="<%= main_app.cdn_image_url(section.img_three_xl) %>"
+        alt="<%= section&.title_three %>">
+    <% else %>
+      <%= icon( name: 'card-image',
+                classes: 'homepage-taxon-box text-black-50',
+                width: 26,
+                height: 26) %>
+    <% end %>
+    <div class="<%= labels_class %>" aria-label="<%= section&.title_three %>">
+      <h3 class="homepage-hpb homepage-featured-product"><%= section&.title_three %></h3>
     </div>
   <% end %>
 </div>
