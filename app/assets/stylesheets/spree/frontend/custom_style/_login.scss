@@ -1,0 +1,27 @@
+.login-header {
+  color: #2a2a2a !important;
+}
+.login-btn {
+  background-color: #71cd14 !important;
+  color: #ffffff !important;
+  border: 1px solid #71cd14 !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+.login-btn:hover {
+  background-color: #ffffff !important;
+  color: #71cd14 !important;
+  transition: all 300ms linear 0s;
+}
+.no-account-text {
+  font-size: 15px !important;
+  margin: 12px 0 !important;
+  color: #555555 !important;
+}
+.sign-up-link {
+  font-weight: 600;
+  color: #71cd14 !important;
+}
+.custom-gap {
+  gap: 5px !important;
+}

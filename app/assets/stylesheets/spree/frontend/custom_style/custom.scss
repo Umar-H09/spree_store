@@ -7,6 +7,8 @@
 @import "_footer";
 @import "_cart";
 @import "_checkout";
+@import "_login";
+@import "_signup";
 
 .custom-subcategories {
   color: #555555 !important;
@@ -51,4 +53,14 @@
 .custom-btn-price:hover {
   background-color: #ffffff !important;
   color: #71cd14 !important;
+}
+.order-place {
+  color: #555555 !important;
+}
+.order-success {
+  color: #555555 !important;
+  margin-top: 10px !important;
+}
+.ordered-number {
+  margin: 40px 0;
 }
