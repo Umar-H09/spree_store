@@ -32,7 +32,7 @@
       <% else %>
         <div class="d-table-cell"><%= Spree.t(:shipping) %>:</div>
         <% shipping_total = Spree::Money.new(order.shipments.to_a.sum(&:cost), currency: order.currency) %>
-        <div class="d-table-cell text-right"
+        <div class="d-table-cell text-right checkout-review-nummeric"
             data-hook='shipping-total'
             data-currency='<%= Money::Currency.find(order.currency).symbol %>'
             thousands-separator='<%= shipping_total.thousands_separator %>'
