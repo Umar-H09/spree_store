@@ -1,17 +1,18 @@
 <div class="container account-page">
-  <h3 class="text-uppercase spree-mb-large spree-mt-large spree-header"><%= accurate_title %></h3>
+  <h3 class="text-uppercase spree-mb-large spree-mt-large spree-header account-title"><%= accurate_title %></h3>
 
   <div class="row">
-    <div class="col-xs-12 col-lg-4">
-      <dt class="text-uppercase account-page-user-info-item-title">
+    <div class="col-xs-12 col-lg-8 my-4">
+      <dt class="text-uppercase account-page-user-info-item-title account-info">
         <%= Spree.t(:account_info) %>
           <%= link_to spree.edit_user_path(@user), class: "account-page-user-info-item-title-edit" do %>
-          <%= inline_svg_tag('edit.svg', width: 27.6, height: 24) %>
+          <%= inline_svg_tag('edit.svg', width: 22, height: 19) %>
         <% end %>
       </dt>
-      <dd class="account-page-user-info-item-definition"><%= @user.email %></dd>
-
-      <div class="d-lg-inline-block account-page-user-info-item-store-credits">
+      <dd class="account-page-user-info-item-definition account-user-mail"><%= @user.email %></dd>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+      <div class="d-lg-inline-block account-page-user-info-item-store-credits my-2 store-credit-space">
         <p class="my-0 text-center">
           <%= Spree.t(:store_credit_name) %>
           <% @user.available_store_credits(current_store).each do |value| %>
@@ -20,8 +21,7 @@
         </p>
       </div>
     </div>
-    <div class="col-xs-12 col-lg-8 mt-sm-5 mt-lg-0">
-      <h4 class="mb-3"><%= link_to Spree.t(:add_new_address), spree.new_address_path, method: :get %></h4>
+    <div class="col-12 mt-sm-5 mt-lg-0">
       <div class="row">
         <% @user.addresses.each_with_index do |address, index| %>
           <div class="col-12 col-sm-6 mb-3">
@@ -40,13 +40,14 @@
           </div>
         <% end %>
       </div>
+      <h4 class="mb-3"><%= link_to Spree.t(:add_new_address), spree.new_address_path, method: :get, class:'add-address' %></h4>
     </div>
   </div>
 
   <div data-hook="account_my_orders" class="account-page-orders" id="account-my-orders">
-    <h3 class="text-uppercase spree-mb-medium spree-mt-medium spree-header"><%= Spree.t(:my_orders) %></h3>
+    <h3 class="text-uppercase spree-mb-medium spree-mt-medium spree-header account-title"><%= Spree.t(:my_orders) %></h3>
     <% if @orders.present? %>
-      <table>
+      <table class="table table-striped table-hover">
         <thead class="active">
           <tr>
             <th class="text-uppercase text-secondary account-page-order-number"><%= Spree::Order.human_attribute_name(:number) %></th>
@@ -65,7 +66,7 @@
               <td class="account-page-order-status"><%= Spree.t("order_state.#{order.state}").titleize %></td>
               <td class="account-page-order-payment-state"><%= Spree.t("payment_states.#{order.payment_state}").titleize if order.payment_state %></td>
               <td class="account-page-order-shipment-state"><%= Spree.t("shipment_states.#{order.shipment_state}").titleize if order.shipment_state %></td>
-              <td class="account-page-text-primary account-page-order-total account-page-lead"><%= order.display_total %></td>
+              <td class="account-page-text-primary account-page-order-total account-page-lead font-weight-bold"><%= order.display_total %></td>
               <td class="account-page-arrow-container" data-order-path="<%= spree.order_path(order) %>">
                 <%= link_to '', spree.order_path(order), { class: "account-page-order-arrow" } %>
               </td>

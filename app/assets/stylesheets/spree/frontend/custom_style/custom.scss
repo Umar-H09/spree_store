@@ -9,6 +9,7 @@
 @import "_checkout";
 @import "_login";
 @import "_signup";
+@import "_user_account";
 
 .custom-subcategories {
   color: #555555 !important;
@@ -63,4 +64,7 @@
 }
 .ordered-number {
   margin: 40px 0;
+}
+.address-delete-popup {
+  line-height: 25px !important;
 }
