@@ -13,25 +13,25 @@
         </p>
       </div>
     </div>
-<% if Spree::Frontend::Config[:remember_me_enabled] || spree.respond_to?(:recover_password_path) %>
-  <div class="d-flex justify-content-between align-items-center mt-4 mt-sm-5 mt-lg-4 spree-mb-medium">
-    <% if Spree::Frontend::Config[:remember_me_enabled] %>
-      <div class="spree-checkbox-container">
-        <div class="spree-checkbox">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me, '' %>
-        </div>
-        <%= f.label :remember_me, Spree.t(:remember_me), class: 'spree-checkbox-label' %>
-      </div>
-    <% end %>
+    <% if Spree::Frontend::Config[:remember_me_enabled] || spree.respond_to?(:recover_password_path) %>
+      <div class="d-flex justify-content-between align-items-center mt-4 mt-sm-5 mt-lg-4 spree-mb-medium">
+        <% if Spree::Frontend::Config[:remember_me_enabled] %>
+          <div class="spree-checkbox-container">
+            <div class="spree-checkbox">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me, '' %>
+            </div>
+            <%= f.label :remember_me, Spree.t(:remember_me), class: 'spree-checkbox-label' %>
+          </div>
+        <% end %>
 
-    <% if spree.respond_to?(:recover_password_path) %>
-      <div class="forgot-password mt-0">
-        <%= link_to Spree.t(:forgot_password), spree.recover_password_path, class: 'text-center' %>
+        <% if spree.respond_to?(:recover_password_path) %>
+          <div class="forgot-password mt-0">
+            <%= link_to Spree.t(:forgot_password), spree.recover_password_path, class: 'text-center' %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-<% end %>
-    <%= f.submit Spree.t(:login), class: 'btn btn-primary btn-block spree-btn login-btn' %>
+   <% end %>
+   <%= f.submit Spree.t(:login), class: 'btn btn-primary btn-block spree-btn login-btn' %>
   <% end %>
 </div>
