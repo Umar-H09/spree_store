@@ -1,8 +1,8 @@
 <% if @cms_page %>
   <% if simple_page?(@cms_page) %>
-  <div class="container">
+  <div class="container info-pages">
     <div class="row my-5">
-      <div class="col-12">
+      <div class="offset-2 col-8 pages-content">
         <%= @cms_page.content.html_safe %>
       </div>
     </div>
