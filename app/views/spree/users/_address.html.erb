@@ -1,17 +1,17 @@
-<address class="mb-0 col-12">
+<address class="mb-0 col-12 p-0">
   <% if address.label&.present? %>
-    <h4 class="m-0 truncate"><%= address.label %></h4>
+    <h4 class="m-0 truncate account-address-label"><%= address.label %></h4>
   <% end %>
-  <span class="account-page-user-full-name">
+  <span class="account-page-user-full-name user-address">
     <%= address.full_name %>
   </span>
-  <div>
+  <div class="user-address">
     <%= "#{address.address1} #{address.address2}" %>,
   </div>
-  <div>
+  <div class="user-address">
     <%= "#{address.city}, #{address.state_text} #{address.zipcode}" %>,
   </div>
-  <div>
+  <div class="user-address">
     <%= address.country.name %>
   </div>
 </address>
