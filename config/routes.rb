@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/contact-us', to: 'spree/contact_us#new', as: :new_contact_us
+  post '/contact-us', to: 'spree/contact_us#create', as: :contact_us
 end
